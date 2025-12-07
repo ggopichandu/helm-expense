@@ -17,9 +17,8 @@ spec:
     metadata:
       labels:
         app: nginx
-        purpose: helme
+        purpose: helm
     spec:
       containers:
       - name: nginx
         image: nginx:{{ .Values.deployment.imageVersion }}
-        
