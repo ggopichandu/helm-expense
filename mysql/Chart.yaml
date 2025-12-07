@@ -1,4 +1,4 @@
 apiVersion: v1
 name: mysql
 version: 0.0.2
-description: This is the helm implemantion of the mysql
+description: This is the helm implemantion of mysql for the project expense

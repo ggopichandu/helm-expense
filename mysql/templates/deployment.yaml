@@ -9,7 +9,7 @@ metadata:
     project: expense 
     tier: db
 spec:
-  replicas: {{ Values.deployment.replicas }}
+  replicas: {{ .Values.deployment.replicas }}
   selector:
     matchLabels:
       component: mysql
