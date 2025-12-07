@@ -1,7 +1,7 @@
 configmap:
   port: 8080
 deployment:
-  replicas: 2
-  imageVersion: latest  
+  replicas: 3
+  imageVersion: trixie-perl  
 service:
   nodePort: 32750  
