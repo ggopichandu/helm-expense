@@ -9,4 +9,4 @@ spec:
   ports:
   - protocol: TCP
     port: 80 # service-port
-    targetPort: {{ .value.configmap.port }}  # target-port        
+    targetPort: {{ .Values.configmap.port }}  # target-port        
