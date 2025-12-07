@@ -1,0 +1,28 @@
+piVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+  namespace: expense
+  # these labels are deployments related lables
+  labels:
+    component: mysql
+    project: expense 
+    tier: db
+spec:
+  replicas: {{ Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      component: mysql
+      project: expense 
+      tier: db
+      # pod definition
+  template:
+    metadata:
+      labels:
+        component: mysql
+        project: expense 
+        tier: db
+    spec:
+      containers:
+      - name: nginx
+        image: gumma4545/mysql:{{ .Values.deployment.imageVersion }}
